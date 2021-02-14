@@ -1,6 +1,6 @@
 # Country-flag-quiz
 
- Final Project: Country Flag Quiz.
+ Last Project: Country Flag Quiz.
 
 User Story:
 * Users see a page with a title and subtext that explains the quiz.
@@ -16,3 +16,8 @@ User Story:
   - If they get 2/3  or 1/3 they will get a different message that asks them to keep practicing.
   - If they get 0/3 then they should get a different message (can be anything you want).
 * The final page should have a link that allows users to restart a new quiz.
+
+Tool used,
+*HTML
+*CSS
+*JS

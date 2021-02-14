@@ -17,7 +17,7 @@ User Story:
   - If they get 0/3 then they should get a different message (can be anything you want).
 * The final page should have a link that allows users to restart a new quiz.
 
-Tool used,
+Tools used,
 * HTML
 * CSS
 * JS

@@ -18,6 +18,6 @@ User Story:
 * The final page should have a link that allows users to restart a new quiz.
 
 Tool used,
-*HTML
-*CSS
-*JS
+* HTML
+* CSS
+* JS

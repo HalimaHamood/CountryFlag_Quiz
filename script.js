@@ -23,6 +23,7 @@ const country_list = ["Afghanistan","Albania","Algeria","Andorra","Angola","Angu
     content.innerHTML= `<input type=radio>${removedItem}</input>`
 
     console.log(removedItem)
+    
   }
   
   getRandomIndex();

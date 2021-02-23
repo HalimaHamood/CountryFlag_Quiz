@@ -12,43 +12,33 @@ const country_list = ["Afghanistan","Albania","Algeria","Andorra","Angola","Angu
 	,"Turkey","Turkmenistan","Turks and Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay"
   ,"Uzbekistan","Venezuela","Vietnam","Virgin Islands (U.S.)","Yemen","Zambia","Zimbabwe"];
 
-  function getRandomIndex(items) {
+// API
+const api= "https://restcountries.eu/rest/v2/all"
+async function getData(){
+    const res= await fetch(api)
+    const data= await res.json()
+    var print= data.map(country => country.flag)
+    console.log(print)
+    const img = document.querySelector("#img")
+    img.innerHTML = `<img src="${print}" width="150"/>`
+    document.querySelector("#img").src = print.img
+}
+
+// Random options
+  function getRandomCountry(items) {
     return Math.floor(Math.random() * items.length);
   }
-  
   for (var i = 0; i < 4; i++) {
-    var removedItem = country_list.splice(getRandomIndex(country_list), 1);
+    var removedItem = country_list.splice(getRandomCountry(country_list), 1);
     const content = document.querySelector("#content")
-    
-    content.innerHTML= `<input type=radio>${removedItem}</input>`
+    content.innerHTML += `<input type=radio>${removedItem}</input>`
 
     console.log(removedItem)
 
   }
-  
-  getRandomIndex();
+ 
+  getData();
 
 
 
 
-
-
-  
-
-
-// const api= "https://restcountries.eu/rest/v2/all"
-
-// async function getData(){
-//     const res= await fetch(api)
-//     const data= await res.json()
-//     // const print= data.map(country => country.flag)
-//     // console.log(print)
-// printData(data)
-//     // Content.innerHTML= <img src="${data[0].flag}" width="150"/>
-
-//     // document.querySelector("#content img").src = data.img
-// }
-
-
-
-// // getData()
